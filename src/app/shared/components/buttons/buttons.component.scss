@@ -1,0 +1,53 @@
+@import "~src/assets/scss/_vars";
+
+/*BUTTONS *
+  -----------------------------------------------*/
+  a {
+    color: color(primary);
+    text-decoration: none;
+    outline: 0;
+  }
+  .btn,
+  button {
+    display: inline-block;
+    background:linear-gradient(90deg, #FF416C ,#FF4B2B);
+    color: white;
+    line-height: 1;
+    padding: $gutter;
+    padding: 0.4em 0.7em 0.4em 0.7em;
+    border: 0;
+    text-align: center;
+    transition: all ease-out 300ms;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.25);
+  }
+  .btn:hover,
+  button:hover,
+  .btn:focus,
+  button:focus {
+    background:color(grey);
+    color: color(white);
+  }
+  .btn.alt {
+    background: color(secondary);
+  }
+  .btn.alt:hover,
+  .btn.alt:focus {
+    background: color(gray);
+  }
+  .btn-border {
+    background: none;
+    border: 1px solid color(primary);
+    color: color(primary);
+  }
+  .btn-border:hover {
+    background: color(grey);
+    border-color: color(grey);
+    color: color(white);
+  }
+  .btn-big {
+    font-size: 1.5em;
+  }
+  .btn-small {
+    font-size: 0.8em;
+  }

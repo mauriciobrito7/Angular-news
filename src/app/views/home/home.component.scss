@@ -1,0 +1,7 @@
+@import '~src/assets/scss/_container';
+@import "~src/assets/scss/_vars";
+
+.wrapper{
+  max-width: $medium;
+  margin: $gutter auto !important;
+}
