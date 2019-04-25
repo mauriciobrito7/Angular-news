@@ -6,9 +6,10 @@ import { ShellComponent } from './core/shell/shell.component';
 import { CoreModule } from './core/core.module';
 import { environment } from '../environments/environment';
 
+
 @NgModule({
   declarations: [
-  ],
+ ],
   imports: [
     BrowserModule,
     CoreModule

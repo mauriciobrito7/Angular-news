@@ -21,14 +21,14 @@ export class NewsService {
        video:[`cadena de texto`]
       },
       { id:2, 
-        title:'Laundroid, el robot de ensueño que prometía lavar, planchar y doblar la ropa está muerto, sus creadores se declaran en quiebra',
+        title:'Professional Best Small Mini Lavalier Lapel Omnidirectional Condenser ',
        content:`The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
        bred for hunting.`, 
-       author: `Mauricio Brito`, 
+       author: `Ronniel`, 
        date:`24-04-2019`, 
        label: `internacionales`, 
-       img:[`https://material.angular.io/assets/img/examples/shiba2.jpg`], 
+       img:[`https://images-na.ssl-images-amazon.com/images/I/51%2BZ0yubjXL._SY355_.jpg`], 
        video:[`cadena de texto`]
       } 
     ]

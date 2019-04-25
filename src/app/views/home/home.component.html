@@ -1,3 +1,11 @@
 <div class="wrapper">
-  <app-new *ngFor="let new of news" [title]="new.title" [content]="new.content" [author]="new.author" [date]="new.date" [label]="new.label" routerLink="new/{{new.id}}"></app-new>
+  <app-new *ngFor="let new of news" 
+  [title]="new.title" 
+  [content]="new.content" 
+  [author]="new.author" 
+  [date]="new.date" 
+  [label]="new.label"
+  [img]="new.img" 
+  routerLink="new/{{new.id}}">
+  </app-new>
 </div>

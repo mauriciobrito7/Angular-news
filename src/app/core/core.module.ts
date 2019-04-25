@@ -15,9 +15,14 @@ const routes: Routes = [
     path: '',
     loadChildren: './../views/home/home.module#HomeModule'
   },
-  /*{
-    path:'new/:id', component:NewContentComponent, pathMatch: 'full'
-  }*/
+  {
+    path: 'login',
+    loadChildren: './../views/login/login.module#LoginModule'
+  },
+  {
+    path: 'admin',
+    loadChildren: './../views/admin/admin.module#AdminModule'
+  }
 ];
 @NgModule({
   imports: [

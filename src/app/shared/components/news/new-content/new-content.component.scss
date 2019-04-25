@@ -1,0 +1,7 @@
+@import '~src/assets/scss/_container';
+@import "~src/assets/scss/_vars";
+article{
+    margin: $gutter*4 auto !important;
+    background: color(white);
+    max-width: $large;
+}
