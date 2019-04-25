@@ -12,18 +12,26 @@ import { News } from 'src/app/shared/models/news';
 export class HomeComponent implements OnInit {
   news: Array<any>;
   news$: Observable<News[]>;
+  labels$: Observable<any>;
+
+  labels = [
+    'internacionales', 'regionales', 'nacionales'
+  ]
 
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
 
-    /*this.news$ = this.newsService.getTodos();
+    this.news$ = this.newsService.getTodos();
     this.news$.subscribe(() => {
       this.news$ = this.newsService.getTodos();
-    });*/
+    });
+    this.labels$ = this.newsService.getLabel();
+    this.labels$.subscribe(() => {
+      this.labels$ = this.newsService.getTodos();
+    });
 
-    this.news = this.newsService.getNews();
-
+    
   }
 
 }

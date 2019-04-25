@@ -1,9 +1,9 @@
 <div class="wrapper"> 
-  <div *ngFor="let new of news ">
-    {{new.title}}
-    {{new | json}}
-  </div>
-  <app-new *ngFor="let new of news " 
+  <select name="filtrar">
+    <option value="" disabled selected>Filtrar</option>
+    <option *ngFor="let label of labels" value="filtrar">{{label}}</option> 
+  </select>
+  <app-new *ngFor="let new of news$ | async" 
   [title]="new.title" 
   [content]="new.content" 
   [author]="new.author" 

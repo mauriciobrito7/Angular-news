@@ -69,7 +69,7 @@ export class NewsService {
 
   getTodos(): Observable<any> {
     //return this.db.collection<News>(this.todoCollectionNews, ref => ref.orderBy('lastModifiedDate', 'desc')).get();
-    return this.db.collection(this.basePath).snapshotChanges();
+    return this.db.collection(this.basePath).valueChanges();
     /*
     this.newsObservable = this.db.collection(this.basePath).snapshotChanges().map(actions => {
       return actions.map(action => {
@@ -81,6 +81,9 @@ export class NewsService {
     });*/
 
     //return this.newsObservable;
+  }
+  getLabel(): Observable<any>{
+    return this.db.collection("labels").valueChanges();
   }
   saveTodo(new$: News): Promise<DocumentReference> {
     return this.db.collection(this.todoCollectionNews).add(new$);
