@@ -13,7 +13,7 @@ import { NewsService } from 'src/app/shared/services/news.service';
   styleUrls: ['./new-content.component.scss']
 })
 export class NewContentComponent implements OnInit {
-  private new: INews;
+  new: INews;
   constructor(private newsService: NewsService, private route: ActivatedRoute) { }
 
   ngOnInit() {

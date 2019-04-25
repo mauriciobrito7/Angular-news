@@ -1,5 +1,9 @@
-<div class="wrapper">
-  <app-new *ngFor="let new of news" 
+<div class="wrapper"> 
+  <div *ngFor="let new of news ">
+    {{new.title}}
+    {{new | json}}
+  </div>
+  <app-new *ngFor="let new of news " 
   [title]="new.title" 
   [content]="new.content" 
   [author]="new.author" 

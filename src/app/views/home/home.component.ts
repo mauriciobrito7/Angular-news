@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from 'src/app/shared/services/news.service';
-import { INews } from 'src/app/shared/services/interface/news';
+
 import { Observable } from 'rxjs';
+import { News } from 'src/app/shared/models/news';
 
 @Component({
   selector: 'app-home',
@@ -9,17 +10,19 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  //news: Array<INews>;
-  private news$: Observable<INews[]> = new Observable<INews[]>();
-  private news: INews[] = [];
+  news: Array<any>;
+  news$: Observable<News[]>;
 
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
+
+    /*this.news$ = this.newsService.getTodos();
+    this.news$.subscribe(() => {
+      this.news$ = this.newsService.getTodos();
+    });*/
+
     this.news = this.newsService.getNews();
-    this.news$.subscribe(news =>
-      this.news = news
-    );
 
   }
 
